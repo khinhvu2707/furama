@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="homePage :: head">
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<p th:replace="homePage :: header"></p>
+<div th:replace="homePage :: nav"></div>
+<div class="container-fluid bg-light border ">
+    <div class="row">
+        <div class="col-lg-2 border-right">
+            <ul th:replace="homePage :: left"></ul>
+        </div>
+        <div class="col-lg-10 pt-3 pb-3">
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Information Employee : </h4>
+                    <div>
+                        <div class="card mb-3" style="width: 70%;margin:20px 15%">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <img src="/image/hoa9.jpg" style="width: 100%">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+
+                                        <table style="text-align: center;width: 90%">
+                                            <tr><h5 class="card-title" th:text="${employee.employeeName}" style="text-align: center"></h5></tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Birthday :</td>
+                                                <td th:text="${employee.employeeBirthday}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Id Card :</td>
+                                                <td th:text="${employee.employeeIdCard}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Salary :</td>
+                                                <td th:text="${employee.employeeSalary}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Phone :</td>
+                                                <td th:text="${employee.employeePhone}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Email :</td>
+                                                <td th:text="${employee.employeeEmail}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Address :</td>
+                                                <td th:text="${employee.employeeAddress}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Position :</td>
+                                                <td th:text="${employee.position.positionName}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>EducationDegree :</td>
+                                                <td th:text="${employee.educationDegree.educationDegreeName}"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/image/icon.gif"></td>
+                                                <td>Division :</td>
+                                                <td th:text="${employee.division.divisionName}"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="mb-0" style="margin-left: 80%">
+                      <a href="/employee"><button type="button" class="btn btn-warning m-2">Back to List Employee</button></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="homePage :: footer"></footer>
+</body>
+</html>

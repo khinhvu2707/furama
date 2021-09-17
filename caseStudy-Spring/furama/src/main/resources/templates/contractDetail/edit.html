@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="homePage :: head">
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<p th:replace="homePage :: header"></p>
+<div th:replace="homePage :: nav"></div>
+<div class="container-fluid bg-light border ">
+    <div class="row">
+        <div class="col-lg-2 border-right">
+            <ul th:replace="homePage :: left"></ul>
+        </div>
+        <div class="col-lg-10 pt-3 pb-3">
+            <div class="alert alert-danger" role="alert">
+                <p> The signed contract cannot be changed! Let's delete it and create a new contract!</p>
+                <p>--- Hợp đồng đã ký kết thì không thể thay đổi ! Hãy xóa đi và tạo hợp đồng mới ! ---</p>
+            </div>
+            <div class="mb-0" style="margin-left: 70%">
+                <a href="/contractDetail"><button type="button" class="btn btn-warning m-2">Back to List Contract Detail</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="homePage :: footer"></footer>
+</body>
+</html>

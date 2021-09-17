@@ -1,0 +1,79 @@
+<div class="alert mt-3 table-responsive" role="alert" style="background-color: #E8E7F5">
+  <h4 class="alert-heading">Information Service : </h4>
+  <div>
+    <div class="card mb-3 rounded-3" style="width: 90%;margin-left: 5%">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <img src="assets/image/furama12.jpg" style="width: 100%">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <table style="text-align: center;width: 90%">
+              <tr *ngFor="let service of services">
+                <td style="width: 20%"><img src="assets/image/icon.gif"></td>
+                <td style="width: 40%">Service Code :</td>
+                <td>{{service.serviceCode}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Service Name:</td>
+                <td>{{service.serviceName}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Service Area:</td>
+                <td>{{service.serviceArea}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Cost:</td>
+              <td>{{service.serviceCost}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Max People:</td>
+                <td>{{service.serviceMaxPeople}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Rent Type:</td>
+                <td>{{service.rentType.rentTypeName}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Service Type:</td>
+                <td>{{service.serviceType.serviceTypeName}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Standard Room:</td>
+                <td>{{service.standardRoom}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Description Other Convenience:</td>
+                <td>{{service.descriptionOtherConvenience}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Pool Area:</td>
+                <td>{{service.poolArea}}</td>
+              </tr>
+              <tr *ngFor="let service of services">
+                <td><img src="assets/image/icon.gif"></td>
+                <td>Number Of Floor:</td>
+                <td>{{service.numberOfFloor}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="mb-0" style="margin-left: 80%">
+    <a [routerLink]="['/service-list']"><button type="button" class="btn m-2" style="background-color: #9EDEED">Back to List Service</button></a>
+  </div>
+</div>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="homePage :: head">
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<p th:replace="homePage :: header"></p>
+<div th:replace="homePage :: nav"></div>
+<div class="container-fluid bg-light border ">
+    <div class="row">
+        <div class="col-lg-2 border-right">
+            <ul th:replace="homePage :: left"></ul>
+        </div>
+        <div class="col-lg-10 pt-3 pb-3">
+            <div class="alert alert-info" role="alert">
+                <h4 class="alert-heading">Information Contract :</h4>
+                <div class="card mb-3" style="width: 80%;margin:20px 10%">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <img src="/image/contract.jpg" style="width: 100%">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+
+                                <table style="text-align: center;width: 90%">
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>Start Date :</td>
+                                        <td th:text="${contract.contractStartDate}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>End Date:</td>
+                                        <td th:text="${contract.contractEndDate}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>Deposit:</td>
+                                        <td th:text="${contract.contractDeposit}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>List Attach Service:</td>
+                                        <td th:text="${contract.listAttachService}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon3.gif"></td>
+                                        <td>Total Money:</td>
+                                        <td th:text="${contract.contractTotalMoney}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>Employee:</td>
+                                        <td th:text="${contract.employee.employeeName}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>Customer:</td>
+                                        <td th:text="${contract.customer.customerName}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="/image/icon.gif"></td>
+                                        <td>Service:</td>
+                                        <td th:text="${contract.services.serviceName}"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-0" style="margin-left: 70%">
+                    <a href="/contract"><button type="button" class="btn btn-warning m-2">Back to List Contract</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="homePage :: footer"></footer>
+</body>
+</html>
